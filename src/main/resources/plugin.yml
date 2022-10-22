@@ -1,0 +1,17 @@
+name: CustomRoleplayMessages
+version: '${project.version}'
+main: com.alex22sv.customroleplaymessages.CustomRoleplayMessages
+api-version: 1.18
+authors: [ Alex22_SV ]
+description: Mensajes de roleplay con autores personalizados.
+commands:
+  admin:
+    usage: /admin [jugador] <mensaje>
+    description: Envía mensajes como 'ADMIN'.
+  dioses:
+    usage: /dioses [jugador] <mensaje>
+    description: Envía mensajes como 'DIOSES'.
+  servidor:
+    usage: /servidor [jugador] <mensaje>
+    description: Envía mensajes como 'SERVIDOR'.
+
