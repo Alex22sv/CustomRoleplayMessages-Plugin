@@ -7,34 +7,37 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class ServidorCommand implements CommandExecutor {
+public class AutorCommand implements CommandExecutor {
     private String prefixMessage;
     private Util util;
+    private String author;
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         util = new Util();
-        prefixMessage = ChatColor.RED + "[SERVIDOR]";
         if(sender instanceof Player){
             Player player = (Player) sender;
-
-            if(player.hasPermission("customroleplaymessages.ServidorCommand")){
-                if(args.length < 2){
+            if(player.hasPermission("customroleplaymessages.AutorCommand")){
+                if(args.length < 3){
                     player.sendMessage(util.missingArgsText(command.getName(), "player"));
                     return true;
                 }
-                if(Bukkit.getPlayer(args[0]) != null){
-                    Player target = Bukkit.getPlayer(args[0]);
-                    target.sendMessage(prefixMessage + " " + ChatColor.AQUA + util.fromArgsToString(args, 1));
+                author = args[0];
+                prefixMessage = ChatColor.GREEN + author + ": ";
+                if(Bukkit.getPlayer(args[1]) != null){
+                    Player target = Bukkit.getPlayer(args[1]);
+                    target.sendMessage(prefixMessage + ChatColor.YELLOW + util.fromArgsToString(args, 2));
                 } else{
                     for(Player target : Bukkit.getOnlinePlayers()){
-                        target.sendMessage(prefixMessage + " " + ChatColor.AQUA + util.fromArgsToString(args, 0));
+                        target.sendMessage(prefixMessage + ChatColor.YELLOW + util.fromArgsToString(args, 1));
                     }
                 }
+
             } else {
                 util.missingPermissionsText(player);
+                return true;
             }
         } else {
-            if(args.length < 2){
+            if(args.length < 3){
                 System.out.println(util.missingArgsText(command.getName(), "console"));
                 return true;
             }
@@ -42,12 +45,14 @@ public class ServidorCommand implements CommandExecutor {
                 util.notOnlinePlayersFound();
                 return true;
             }
-            if(Bukkit.getPlayer(args[0]) != null){
-                Player target = Bukkit.getPlayer(args[0]);
-                target.sendMessage(prefixMessage + " " + ChatColor.AQUA + util.fromArgsToString(args, 1));
+            author = args[0];
+            prefixMessage = ChatColor.BLUE + author + ": ";
+            if(Bukkit.getPlayer(args[1]) != null){
+                Player target = Bukkit.getPlayer(args[1]);
+                target.sendMessage(prefixMessage + ChatColor.YELLOW + util.fromArgsToString(args, 2));
             } else{
                 for(Player target : Bukkit.getOnlinePlayers()){
-                    target.sendMessage(prefixMessage + " " + ChatColor.AQUA + util.fromArgsToString(args, 0));
+                    target.sendMessage(prefixMessage + ChatColor.YELLOW + util.fromArgsToString(args, 1));
                 }
             }
         }

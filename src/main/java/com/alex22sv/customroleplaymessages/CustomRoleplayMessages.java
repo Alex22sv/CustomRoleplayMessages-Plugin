@@ -10,6 +10,7 @@ public final class CustomRoleplayMessages extends JavaPlugin {
         util = new Util();
         System.out.println(util.pluginName + " El plugin ha sido activado correctamente.");
         getCommand("admin").setExecutor(new AdminCommand());
+        getCommand("autor").setExecutor(new AutorCommand());
         getCommand("dioses").setExecutor(new DiosesCommand());
         getCommand("servidor").setExecutor(new ServidorCommand());
 

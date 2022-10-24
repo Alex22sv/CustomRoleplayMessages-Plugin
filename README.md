@@ -5,6 +5,7 @@
 ## Features
 
 - Send messages as admin, server, and other senders.
+- Send messages as custom authors, whatever author you want.
 
 ## Set up
 
@@ -12,6 +13,5 @@ After installing the plugin, restart your server (do not `/reload`), after joini
 
 ## Commands
 
-You can find a list of commands with its required permissions here: https://parqueland.ml/#two
-
+You can find a list of commands with its required permissions here: http://crpm.ml/#two
 ## Downloads

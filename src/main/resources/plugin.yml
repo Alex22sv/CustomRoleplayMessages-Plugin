@@ -8,10 +8,14 @@ commands:
   admin:
     usage: /admin [jugador] <mensaje>
     description: Envía mensajes como 'ADMIN'.
+  autor:
+    usage: /autor <nombre del autor> [jugador] <mensaje>
+    description: Envía mensajes con un autor personalizado.
   dioses:
     usage: /dioses [jugador] <mensaje>
     description: Envía mensajes como 'DIOSES'.
   servidor:
     usage: /servidor [jugador] <mensaje>
     description: Envía mensajes como 'SERVIDOR'.
+
 
