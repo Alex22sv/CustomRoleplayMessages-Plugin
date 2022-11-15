@@ -7,16 +7,16 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class AdminCommand implements CommandExecutor {
+public class NoticiaCommand implements CommandExecutor {
     private Util util;
     private String prefixMessage;
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         util = new Util();
-        prefixMessage = ChatColor.GRAY + "<El Mapache>";
+        prefixMessage = ChatColor.RED + "¡NOTICIA DE ÚLTIMA HORA!";
         if(sender instanceof Player){
             Player player = (Player) sender;
-            if(player.hasPermission("customroleplaymessages.AdminCommand")){
+            if(player.hasPermission("customroleplaymessages.NotiiaCommand")){
                 if(args.length < 2){
                     player.sendMessage(util.missingArgsText(command.getName(), "player"));
                     return true;

@@ -14,6 +14,18 @@ commands:
   dioses:
     usage: /dioses [jugador] <mensaje>
     description: Envía mensajes como 'DIOSES'.
+  elmapache:
+    usage: /elmapache [jugador] <mensaje>
+    description: Envía mensajes como 'EL MAPACHE'.
+  eltopo:
+    usage: /eltopo [jugador] <mensaje>
+    description: Envía mensajes como 'EL TOPO'.
+  kaspar:
+    usage: /kaspar [jugador] <mensaje>
+    description: Envía mensajes como 'EL HECHICERO KASPAR'
+  noticia:
+    usage: /noticia [jugador] <mensaje>
+    description: Envía mensajes como '¡NOTICIA DE ÚLTIMA HORA!'
   servidor:
     usage: /servidor [jugador] <mensaje>
     description: Envía mensajes como 'SERVIDOR'.
