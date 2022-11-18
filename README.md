@@ -6,6 +6,7 @@
 
 - Send messages as admin, server, and other senders.
 - Send messages as custom authors, whatever author you want.
+- Different styles for all commands.
 
 ## Set up
 

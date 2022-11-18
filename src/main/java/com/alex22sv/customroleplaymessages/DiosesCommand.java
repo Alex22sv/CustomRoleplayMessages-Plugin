@@ -13,7 +13,7 @@ public class DiosesCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         util = new Util();
-        prefixMessage = ChatColor.RED.toString() + ChatColor.MAGIC + "|" + ChatColor.RESET + ChatColor.YELLOW + " DIOSES " + ChatColor.RED + ChatColor.MAGIC + "|" + ChatColor.RESET;
+        prefixMessage = ChatColor.RED.toString() + ChatColor.MAGIC + "|" + ChatColor.RESET + ChatColor.GREEN + " DIOSES " + ChatColor.RED + ChatColor.MAGIC + "|" + ChatColor.RESET;
         if(sender instanceof Player){
             Player player = (Player) sender;
 

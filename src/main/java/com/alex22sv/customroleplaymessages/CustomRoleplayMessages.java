@@ -13,10 +13,11 @@ public final class CustomRoleplayMessages extends JavaPlugin {
         getCommand("autor").setExecutor(new AutorCommand());
         getCommand("dioses").setExecutor(new DiosesCommand());
         getCommand("servidor").setExecutor(new ServidorCommand());
-        getCommand("eltopo").setExecutor(new ElTopoCommand());
-        getCommand("elmapache").setExecutor(new ElMapacheCommand());
+        getCommand("topo").setExecutor(new TopoCommand());
+        getCommand("mapache").setExecutor(new MapacheCommand());
         getCommand("noticia").setExecutor(new NoticiaCommand());
         getCommand("kaspar").setExecutor(new KasparCommand());
+        getCommand("hermandad").setExecutor(new HermandadCommand());
 
     }
 

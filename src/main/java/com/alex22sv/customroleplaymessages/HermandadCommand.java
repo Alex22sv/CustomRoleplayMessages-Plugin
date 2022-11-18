@@ -7,26 +7,26 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class ElMapacheCommand implements CommandExecutor {
+public class HermandadCommand implements CommandExecutor {
     private Util util;
     private String prefixMessage;
     @Override
-    public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
+    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         util = new Util();
-        prefixMessage = ChatColor.GRAY + "<El Mapache>";
+        prefixMessage = "<" + ChatColor.GOLD + "La Herm" + ChatColor.AQUA + "andad" + ChatColor.WHITE + ">";
         if(sender instanceof Player){
             Player player = (Player) sender;
-            if(player.hasPermission("customroleplaymessages.ElMapacheCommand")){
+            if(player.hasPermission("customroleplaymessages.HermandadCommand")){
                 if(args.length < 2){
                     player.sendMessage(util.missingArgsText(command.getName(), "player"));
                     return true;
                 }
                 if(Bukkit.getPlayer(args[0]) != null){
                     Player target = Bukkit.getPlayer(args[0]);
-                    target.sendMessage(prefixMessage + " " + ChatColor.YELLOW + util.fromArgsToString(args, 1));
+                    target.sendMessage(prefixMessage + " " + util.fromArgsToString(args, 1));
                 } else{
                     for(Player target : Bukkit.getOnlinePlayers()){
-                        target.sendMessage(prefixMessage + " " + ChatColor.YELLOW + util.fromArgsToString(args, 0));
+                        target.sendMessage(prefixMessage + " " + util.fromArgsToString(args, 0));
                     }
                 }
             } else {
@@ -43,10 +43,10 @@ public class ElMapacheCommand implements CommandExecutor {
             }
             if(Bukkit.getPlayer(args[0]) != null){
                 Player target = Bukkit.getPlayer(args[0]);
-                target.sendMessage(prefixMessage + " " + ChatColor.YELLOW + util.fromArgsToString(args, 1));
+                target.sendMessage(prefixMessage + " " + util.fromArgsToString(args, 1));
             } else{
                 for(Player target : Bukkit.getOnlinePlayers()){
-                    target.sendMessage(prefixMessage + " " + ChatColor.YELLOW + util.fromArgsToString(args, 0));
+                    target.sendMessage(prefixMessage + " " + util.fromArgsToString(args, 0));
                 }
             }
         }

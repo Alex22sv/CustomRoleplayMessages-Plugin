@@ -13,7 +13,7 @@ public class AdminCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         util = new Util();
-        prefixMessage = ChatColor.GRAY + "<El Mapache>";
+        prefixMessage = "<" + ChatColor.RED + "Admin" + ChatColor.WHITE + ">";
         if(sender instanceof Player){
             Player player = (Player) sender;
             if(player.hasPermission("customroleplaymessages.AdminCommand")){
@@ -23,10 +23,10 @@ public class AdminCommand implements CommandExecutor {
                 }
                 if(Bukkit.getPlayer(args[0]) != null){
                     Player target = Bukkit.getPlayer(args[0]);
-                    target.sendMessage(prefixMessage + " " + ChatColor.YELLOW + util.fromArgsToString(args, 1));
+                    target.sendMessage(prefixMessage + " " + util.fromArgsToString(args, 1));
                 } else{
                     for(Player target : Bukkit.getOnlinePlayers()){
-                        target.sendMessage(prefixMessage + " " + ChatColor.YELLOW + util.fromArgsToString(args, 0));
+                        target.sendMessage(prefixMessage + " " + util.fromArgsToString(args, 0));
                     }
                 }
             } else {
@@ -43,10 +43,10 @@ public class AdminCommand implements CommandExecutor {
             }
             if(Bukkit.getPlayer(args[0]) != null){
                 Player target = Bukkit.getPlayer(args[0]);
-                target.sendMessage(prefixMessage + " " + ChatColor.YELLOW + util.fromArgsToString(args, 1));
+                target.sendMessage(prefixMessage + " " + util.fromArgsToString(args, 1));
             } else{
                 for(Player target : Bukkit.getOnlinePlayers()){
-                    target.sendMessage(prefixMessage + " " + ChatColor.YELLOW + util.fromArgsToString(args, 0));
+                    target.sendMessage(prefixMessage + " " + util.fromArgsToString(args, 0));
                 }
             }
         }

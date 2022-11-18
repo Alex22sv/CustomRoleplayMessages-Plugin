@@ -13,7 +13,7 @@ public class ServidorCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         util = new Util();
-        prefixMessage = ChatColor.RED + "[SERVIDOR]";
+        prefixMessage = ChatColor.GOLD + "[Servidor]";
         if(sender instanceof Player){
             Player player = (Player) sender;
 
@@ -24,10 +24,10 @@ public class ServidorCommand implements CommandExecutor {
                 }
                 if(Bukkit.getPlayer(args[0]) != null){
                     Player target = Bukkit.getPlayer(args[0]);
-                    target.sendMessage(prefixMessage + " " + ChatColor.AQUA + util.fromArgsToString(args, 1));
+                    target.sendMessage(prefixMessage + " " + ChatColor.WHITE + util.fromArgsToString(args, 1));
                 } else{
                     for(Player target : Bukkit.getOnlinePlayers()){
-                        target.sendMessage(prefixMessage + " " + ChatColor.AQUA + util.fromArgsToString(args, 0));
+                        target.sendMessage(prefixMessage + " " + ChatColor.WHITE + util.fromArgsToString(args, 0));
                     }
                 }
             } else {
@@ -44,10 +44,10 @@ public class ServidorCommand implements CommandExecutor {
             }
             if(Bukkit.getPlayer(args[0]) != null){
                 Player target = Bukkit.getPlayer(args[0]);
-                target.sendMessage(prefixMessage + " " + ChatColor.AQUA + util.fromArgsToString(args, 1));
+                target.sendMessage(prefixMessage + " " + ChatColor.WHITE + util.fromArgsToString(args, 1));
             } else{
                 for(Player target : Bukkit.getOnlinePlayers()){
-                    target.sendMessage(prefixMessage + " " + ChatColor.AQUA + util.fromArgsToString(args, 0));
+                    target.sendMessage(prefixMessage + " " + ChatColor.WHITE + util.fromArgsToString(args, 0));
                 }
             }
         }

@@ -3,6 +3,9 @@ package com.alex22sv.customroleplaymessages;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
+import java.util.HashMap;
+import java.util.Random;
+
 public class Util {
     // Plugin name
     public String pluginName = "[CustomRoleplayMessages]";
@@ -42,5 +45,18 @@ public class Util {
     public String alternateColorFormat(String str){
         // Alternate the color format
         return ChatColor.translateAlternateColorCodes('&', str);
+    }
+
+    // Author styles
+    private HashMap<Integer, String> styles = new HashMap<>();
+    public String selectAuthorStyle(String author){
+        Random rand = new Random();
+        styles.put(0, "<" + ChatColor.GREEN + author + ChatColor.WHITE + "> ");
+        styles.put(1, "<" + ChatColor.GOLD + author + ChatColor.WHITE + "> ");
+        styles.put(2, "<" + ChatColor.BLUE + author + ChatColor.WHITE + "> ");
+        styles.put(3, "<" + ChatColor.AQUA + author + ChatColor.WHITE + "> ");
+        styles.put(4, "<" + ChatColor.YELLOW + author + ChatColor.WHITE + "> ");
+        String prefixMessage = styles.get(rand.nextInt(4));
+        return prefixMessage;
     }
 }

@@ -7,27 +7,30 @@ description: Mensajes de roleplay con autores personalizados.
 commands:
   admin:
     usage: /admin [jugador] <mensaje>
-    description: Envía mensajes como 'ADMIN'.
+    description: Envía mensajes como 'Admin'.
   autor:
     usage: /autor <nombre del autor> [jugador] <mensaje>
     description: Envía mensajes con un autor personalizado.
   dioses:
     usage: /dioses [jugador] <mensaje>
     description: Envía mensajes como 'DIOSES'.
-  elmapache:
-    usage: /elmapache [jugador] <mensaje>
-    description: Envía mensajes como 'EL MAPACHE'.
-  eltopo:
-    usage: /eltopo [jugador] <mensaje>
-    description: Envía mensajes como 'EL TOPO'.
+  hermandad:
+    usage: /hermandad [jugador] <mensaje>
+    description: Envía mensajes como 'La Hermandad'.
+  mapache:
+    usage: /topo [jugador] <mensaje>
+    description: Envía mensajes como 'Señor Mapache'.
+  topo:
+    usage: /topo [jugador] <mensaje>
+    description: Envía mensajes como 'El Topo'.
   kaspar:
     usage: /kaspar [jugador] <mensaje>
-    description: Envía mensajes como 'EL HECHICERO KASPAR'
+    description: Envía mensajes como 'Hecichero Kaspar'
   noticia:
     usage: /noticia [jugador] <mensaje>
     description: Envía mensajes como '¡NOTICIA DE ÚLTIMA HORA!'
   servidor:
     usage: /servidor [jugador] <mensaje>
-    description: Envía mensajes como 'SERVIDOR'.
+    description: Envía mensajes como 'Servidor'.
 
 
